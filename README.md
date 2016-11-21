@@ -3,17 +3,10 @@
  
 ## Install
 
-### linux
-
 ```
 cd typecho/usr/plugins
-mkdir Links
-cd Links
-git clone https://github.com/HanSon/Links_for_Material_Theme.git
+git clone https://github.com/HanSon/Links_for_Material_Theme.git Links
 ```
 
-### windows
-
-直接在*plugins*里新建个*Links*文件夹，然后clone进去即可
 
 
