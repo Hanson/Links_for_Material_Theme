@@ -1,10 +1,10 @@
 <?php
 /**
- * 基于Hanny上修改的友情链接插件，能适应于Material Theme
+ * 友情链接插件
  * 
- * @package Links
+ * @package Links_for_Material_Theme
  * @author HanSon & Hanny
- * @version 1.0.0
+ * @version 1.1.1
  * @dependence 14.10.10-*
  * @link http://hanc.cc
  *
@@ -258,9 +258,7 @@ class Links_Plugin implements Typecho_Plugin_Interface
 	{
 		$options = Typecho_Widget::widget('Widget_Options');
 		if (!isset($options->plugins['activated']['Links'])) {
-			return '<div class="panel panel-info"><a class="panel-heading" onclick="$(\'.links_box\').
-		slideToggle()" href="javascript:;"><h3 class="panel-title">友情链接</h3></a><div class="links_box">
-		<a class="item" href="javascript:void(0);">友情链接插件未激活</a></div></div>';
+			return "<a class=\"item\">友情链接插件未激活</a>";
 		}
 		if (!isset($pattern) || $pattern == "" || $pattern == NULL || $pattern == "SHOW_TEXT") {
 			$pattern = "<a class=\"item\" href=\"{url}\" title=\"{title}\" target=\"_blank\">{name}</a>\n";
@@ -297,9 +295,6 @@ class Links_Plugin implements Typecho_Plugin_Interface
 				$pattern
 			);
 		}
-		$str = '<div class="panel panel-info"><a class="panel-heading" onclick="$(\'.links_box\').
-		slideToggle()" href="javascript:;"><h3 class="panel-title">友情链接</h3></a><div class="links_box">'
-		.$str.'</div></div>';
 		return $str;
 	}
 
@@ -318,7 +313,6 @@ class Links_Plugin implements Typecho_Plugin_Interface
      */
     public static function parseCallback($matches)
     {
-		$db = Typecho_Db::get();
 		$pattern = $matches[3];
 		$links_num = $matches[1];
 		$sort = $matches[2];

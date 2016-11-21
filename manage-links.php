@@ -1,5 +1,5 @@
 <?php
-include 'common.php';
+//include 'common.php';
 include 'header.php';
 include 'menu.php';
 ?>
@@ -12,7 +12,7 @@ include 'menu.php';
                 <div class="col-mb-12">
                     <ul class="typecho-option-tabs clearfix">
                         <li class="current"><a href="<?php $options->adminUrl('extending.php?panel=Links%2Fmanage-links.php'); ?>"><?php _e('友情链接'); ?></a></li>
-						<li><a href=<?php $options->index('/action/links-edit?do=addhanny'); ?> title="如果你喜欢，可以点击快速添加寒泥的博客。"><?php _e('添加寒泥'); ?></a></li>
+						<li><a href=<?php $options->index('/action/links-edit?do=addhanson'); ?> title="如果你喜欢，可以点击快速添加HanSon的博客。"><?php _e('添加HanSon'); ?></a></li>
                         <li><a href="http://www.imhan.com/archives/typecho-links/" title="查看友情链接使用帮助" target="_blank"><?php _e('帮助'); ?></a></li>
                     </ul>
                 </div>
